@@ -50,7 +50,7 @@ Runs all the normal commands in the other scripts, but also just entirely nukes 
 
 Contains the command to initiate a Windows Update detection from the command line on Server 2016 and up, since the old wuauclt commands are deprecated in newer versions of Windows.
 
-##WSUS
+## WSUS
 
 ### Install Reboot Task
 
