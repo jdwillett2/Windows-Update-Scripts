@@ -9,11 +9,11 @@
  9 #>
  
 #Sent to admin
-$to = "jwillett1@iuhealth.org"
+$to = "EMAIL HERE"
 
 #Now Import Posh modul and connect to server
 Import-module poshwsus
-Connect-PSWSUSServer -WsusServer icwwsusapvg -port 8531 -SecureConnection:$true -verbose
+Connect-PSWSUSServer -WsusServer WSUSSERVER -port 8531 -SecureConnection:$true -verbose
 
  
 <#
@@ -26,7 +26,7 @@ First I get status by computer, then mor information about client itself
  
  
 $Output = @() #define array to fill
-$server = Get-WsusServer -Name icwwsusapvg -PortNumber 8531 -UseSsl
+$server = Get-WsusServer -Name WSUSSERVER -PortNumber 8531 -UseSsl
 $Computers = Get-WsusComputer -UpdateServer $server -IncludeDownstreamComputerTargets
  
 foreach ($Computer in $Computers)
