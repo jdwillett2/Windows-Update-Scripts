@@ -1,4 +1,4 @@
-#Looks for updates installed beyond a certain date defined by user input
+#Lists last update installed on the specified list of comupters.
 #Written by Jesse Willett 11/5/2014
 
 $input = Read-Host "Enter Input File"
