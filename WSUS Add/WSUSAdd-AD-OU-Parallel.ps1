@@ -2,6 +2,6 @@ $citrix = Read-Host "Is it a Citrix Group? (Y/N)"
 $group = Read-Host "Enter Security Group Name"
 
 If ($citrix -eq "Y") {
-    get-adgroupmember -Identity "CN=$group,OU=Citrix Patching Groups,OU=System Update Groups,OU=Server Groups,OU=Servers,OU=Computer Accounts,DC=chp,DC=clarian,DC=org" | Select -Exp Name | & '.\WSUSAdd-Process-Parallel.ps1'}
+    get-adgroupmember -Identity "Citrix OU DN HERE" | Select -Exp Name | & '.\WSUSAdd-Process-Parallel.ps1'}
 Else {
-    get-adgroupmember -Identity "CN=$group,OU=System Update Groups,OU=Server Groups,OU=Servers,OU=Computer Accounts,DC=chp,DC=clarian,DC=org" | Select -Exp Name | & '.\WSUSAdd-Process-Parallel.ps1'}
+    get-adgroupmember -Identity "OU DN HERE" | Select -Exp Name | & '.\WSUSAdd-Process-Parallel.ps1'}
